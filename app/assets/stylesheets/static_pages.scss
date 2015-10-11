@@ -2,18 +2,100 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@font-face {
+  font-family: 'Foo Regular';
+  src:font-url('foo_regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bip Regular';
+  src:font-url('bip_regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Romashulka Normal';
+  src:url('/assets/romashulka.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 header{
-  background: yellow;
-  min-height: 170px;
+  min-height: 200px;
   img {
-  margin-top: 10px;
-  margin-left:20px;}
+    margin-top: 20px;
+    margin-left:40px;}
   .slogan {
-  font-size: 22px;
-  font-weight: bold;
-  font-style:italic;
-  font-family:Arial;
-  margin-top: 60px;
-  margin-right: 50px;
+    font-size: 28px;
+    font-weight: bold;
+    font-style:italic;
+    color: #6A50A3;
+    font-family: 'Bip Regular';
+    margin-top: 60px;
+    margin-right: 50px;
   }}
 
+  .center{
+  	margin: 0 auto;
+    margin-bottom: 30px;
+  	width: 1020px;
+    .btn{
+  	  height: 70px;
+  	  width: 200px;
+  	  font-family: 'Bip Regular';
+  	  font-size: 25px;
+  	  font-weight:bold;
+      color:#343931;
+    }
+  	.green{
+  	  background: #169632;
+  	}
+    .red{
+      background:#F55C29;
+    }
+    .orange{
+      background:#F58529;
+    }
+    .purple{
+  	  background: #B430B0;
+  	}
+    .yellow{
+  	  background: #F6F20D;
+  }}
+
+  /*carousel*/
+  .carousel-inner, .carousel-inner .item img{
+    height: 400px; 
+    width: 1200px;
+  }
+  #myCarousel{
+    margin-bottom:30px;
+  }
+
+
+  h1{
+   font-family: 'Foo Regular' !important;
+   color: #D0210A !important;
+  }
+  p{
+    font-family: 'Bip Regular';
+    color:#498209;
+  }
+
+ /*footer*/
+footer{
+  background: #FB8506;
+  padding: 20px;
+  width:100%;
+  h3{
+    color: #227228; }
+  a{
+    color: white; }
+  img{
+    position: relative;
+    top: 15px;}
+  .links{
+    padding-left:30px;}}

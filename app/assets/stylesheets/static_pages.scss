@@ -17,6 +17,13 @@
 }
 
 @font-face {
+  font-family: 'Allods West Regular';
+  src:font-url('vjnhy6Ic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Romashulka Normal';
   src:url('/assets/romashulka.ttf') format('truetype');
   font-weight: normal;
@@ -76,26 +83,42 @@ header{
   }
 
 
-  h1{
+  h2{
    font-family: 'Foo Regular' !important;
    color: #D0210A !important;
+   font-size: 40px !important;
   }
   p{
-    font-family: 'Bip Regular';
+    font-family: 'Allods West Regular';
     color:#498209;
   }
 
  /*footer*/
 footer{
-  background: #FB8506;
   padding: 20px;
   width:100%;
+  font-family: 'Bip Regular';
   h3{
-    color: #227228; }
-  a{
-    color: white; }
+    color: #A32E2E; }
+  a, p{
+    color: white;
+
+
+
+
+
+
+
+
+
+    font-size: 18px; }
+  li {
+    list-style-type: none;
+    text-decoration: none;
+    margin-left: -30px;
+    }
   img{
     position: relative;
-    top: 15px;}
+    left: 50px;}
   .links{
     padding-left:30px;}}

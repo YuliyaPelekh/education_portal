@@ -1,9 +1,9 @@
 <footer>
       <div class='row'>
-  <div class ="col-md-4">
-    <img alt="Слоник" height="200px" src="/assets/elephant.png" width="200px"/>
+  <div class ="col-md-3">
+    <%= image_tag('elephant.png', alt:"Слоник", height:"200px",  width:"200px", class: 'elephant')%>
   </div>
-  <div class='col-md-4 links'>
+  <div class='col-md-3 links'>
    <h3>Кольоровий Слон</h3>
     <ul> 
      <li>
@@ -20,11 +20,13 @@
       </li>
     </ul>
   </div>   
-  <div className ="col-md-4">
+  <div class ="col-md-3">
     <h3>Наші контакти</h3>
     <p>м.Львів, вул.Гординських, 4</p>
     <p>тел.:(067) 724 97 20</p>
-    <input type="submit" value="Зареєструватися" class='btn btn-lg btn-danger'/>
+  </div>
+  <div class = 'col-md-3'>
+    <%= image_tag('palm.png', alt:"Пальма", height:"200px",  width:"200px", class: 'palm')%>
   </div>
   </div>
 </footer>

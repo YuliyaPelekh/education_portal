@@ -1,11 +1,20 @@
 <header>
-	<%= image_tag('logo.png', width:'250', height:'150', alt:'Site Logo', class:'logo')%>
-	<div class='slogan pull-right'>Наші діти набагато здібніші,<br> ніж ми це собі уявляємо!</div>
+  <div class='login pull-right'>
+	<% if current_user %> 
+    <div class='btn btn-sm btn-success'>  <%= current_user.email%> </div>
+      <%= link_to "Log out", logout_path, method: "delete", :class => 'btn btn-sm btn-success' %></li>  
+    <% else %> 
+	   <%= link_to 'Зареєструватися', signup_path, :class => 'btn btn-sm btn-success' %>
+	   <%= link_to 'Ввійти', login_path, :class => 'btn btn-sm btn-success' %>
+    <% end %> 
+  </div>
+  <%= link_to image_tag('logo.png', width:'250', height:'150', alt:'Site Logo', class:'logo'), root_path %>
+  <div class='slogan pull-right'>Наші діти набагато здібніші,<br> ніж ми це собі уявляємо!</div>
 </header>
-<div class='center'>
-<%= link_to 'Кольорові', root_path, :class => 'btn btn-lg red' %>
-<%= link_to 'Новини', '#', :class => 'btn btn-lg green' %>
-<%= link_to 'Розклад', '#', :class => 'btn btn-lg yellow' %>
-<%= link_to 'Галерея', '#', :class => 'btn btn-lg orange' %>
-<%= link_to 'Контакти', contacts_path, :class => 'btn btn-lg purple' %>
-</div>
+<nav>
+  <%= link_to 'Новини', '#', :class => 'btn btn-lg red' %>
+  <%= link_to 'Розклад', '#', :class => 'btn btn-lg green' %>
+  <%= link_to 'Матеріали', '#', :class => 'btn btn-lg yellow' %>
+  <%= link_to 'Галерея', '#', :class => 'btn btn-lg orange' %>
+  <%= link_to 'Контакти', contacts_path, :class => 'btn btn-lg purple' %>
+</nav>

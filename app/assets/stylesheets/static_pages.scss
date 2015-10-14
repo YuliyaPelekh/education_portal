@@ -31,7 +31,7 @@
 }
 
 header{
-  min-height: 200px;
+  min-height: 220px;
   img {
     margin-top: 20px;
     margin-left:40px;}
@@ -41,11 +41,15 @@ header{
     font-style:italic;
     color: #6A50A3;
     font-family: 'Bip Regular';
-    margin-top: 60px;
-    margin-right: 50px;
-  }}
+    margin-top: 80px;
+    margin-right: -50px;}
+  .login{
+    margin-top:20px;
+    margin-right: 20px;
+  }
+}
 
-  .center{
+  nav{
   	margin: 0 auto;
     margin-bottom: 30px;
   	width: 1020px;
@@ -92,6 +96,10 @@ header{
     font-family: 'Allods West Regular';
     color:#498209;
   }
+  .container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 
  /*footer*/
 footer{
@@ -102,22 +110,13 @@ footer{
     color: #A32E2E; }
   a, p{
     color: white;
-
-
-
-
-
-
-
-
-
     font-size: 18px; }
   li {
     list-style-type: none;
     text-decoration: none;
     margin-left: -30px;
     }
-  img{
+  .elephant{
     position: relative;
     left: 50px;}
   .links{

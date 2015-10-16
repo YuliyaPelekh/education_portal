@@ -41,6 +41,18 @@ describe User do
     it { should_not be_valid }
   end
 
+  describe 'when user has a role' do
+  	it 'can be admin' do
+      @user.role = 'admin'
+      expect(@user.admin?).to be true
+    end 
+
+    it 'can be editor' do
+      @user.role = 'editor'
+      expect(@user.editor?).to be true
+    end
+  end 
+
   describe "when email format is invalid" do
     it "should be invalid" do
       addresses = %w[user@foo,com user_at_foo.org example.user@foo.

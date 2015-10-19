@@ -1,0 +1,9 @@
+<%= form_for @new, :html => {:multipart => true} do |f| %>
+  <div class="form-group"> 
+    <%= f.text_field :title, :placeholder => "Заголовок", class: "form-control", :required => true %>
+  </div>
+  <div class="form-group"> 
+     <%= f.text_area :text, class: "form-control", :placeholder => 'Текст', :required => true %>
+  </div>
+    <%= f.submit "Надіслати", class: "btn btn-large btn-danger" %>
+ <% end %>

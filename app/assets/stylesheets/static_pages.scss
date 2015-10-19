@@ -30,6 +30,11 @@
   font-style: normal;
 }
 
+@keyframes toggle {
+  from { transform: rotate(-10deg);}
+  to {transform: rotate(10deg);}
+}
+
 header{
   min-height: 220px;
   img {
@@ -52,14 +57,21 @@ header{
   nav{
   	margin: 0 auto;
     margin-bottom: 30px;
-  	width: 1020px;
+  	width: 1050px;
     .btn{
   	  height: 70px;
   	  width: 200px;
   	  font-family: 'Bip Regular';
   	  font-size: 25px;
   	  font-weight:bold;
-      color:#343931;
+      color: white;
+      box-shadow: 3px 3px 4px green;
+      margin-right: 3px;
+      &:hover{
+        animation-name: toggle;
+        animation-duration: 200ms;
+        animation-iteration-count: 4;
+      }
     }
   	.green{
   	  background: #169632;
@@ -75,6 +87,7 @@ header{
   	}
     .yellow{
   	  background: #F6F20D;
+      color: #7F7373;
   }}
 
   /*carousel*/

@@ -1,0 +1,9 @@
+<div class= 'news jumbotron'>
+  <h1><%= @new.title %></h1>
+  <p> <%= @new.text %></h1>
+  <p><%= link_to 'Відредагувати', edit_news_path(@new) %></p>
+  <p><%= link_to 'Видалити', news_path(@new),
+              method: :delete,
+              data: { confirm: 'Ви впевнені?' } %></p>
+  <p> <%= link_to 'Назад до списку новин', news_index_path %></p>
+</div>

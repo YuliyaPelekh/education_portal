@@ -27,6 +27,7 @@ describe "Authentication" do
       it { should have_link('Вийти', href: logout_path) }
       it { should_not have_link('Зайти', href: login_path) }
       it { should_not have_selector('div.alert.alert-error') }
+      it { should have_selector('div.alert.alert-success', text: "Ласкаво просимо!") }
 
       describe "followed by signout" do
         before { click_link "Вийти" }

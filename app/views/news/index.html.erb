@@ -1,0 +1,10 @@
+<h1>Новини</h1>
+  <% @news.each do |new| %> 
+  <div class='jumbotron'>  
+      <h1><%= link_to new.title, new %></h1>
+      <p><%= new.text %></p>
+  </div>
+  <% end %>
+
+
+<%= link_to 'Створити новину', new_news_path %>

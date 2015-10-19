@@ -2,9 +2,9 @@
   <% @news.each do |new| %> 
   <div class='jumbotron'>  
       <h1><%= link_to new.title, new %></h1>
-      <p><%= new.text %></p>
+      <p><%= truncate new.text, length: 300 %>
+      <%= link_to 'Читати далі', new %></p>
   </div>
   <% end %>
-
-
 <%= link_to 'Створити новину', new_news_path %>
+<%= will_paginate @news %>

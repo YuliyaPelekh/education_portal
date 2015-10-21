@@ -21,6 +21,7 @@ class NewsController < ApplicationController
 
   def show
   	@new = News.find(params[:id])
+    @images = @new.images
   end 
 
   def edit
@@ -46,6 +47,6 @@ class NewsController < ApplicationController
   private
 
     def new_params
-      params.require(:news).permit(:title, :text)
+      params.require(:news).permit(:title, :text, image_attributes: [:id, :news_id, :avatar, :name])
     end
 end

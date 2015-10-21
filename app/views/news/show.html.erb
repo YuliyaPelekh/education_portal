@@ -1,9 +1,22 @@
-<div class= 'news jumbotron'>
+<div class= 'news_show jumbotron'>
   <h1><%= @new.title %></h1>
-  <p> <%= @new.text %></h1>
-  <p><%= link_to 'Відредагувати', edit_news_path(@new) %></p>
-  <p><%= link_to 'Видалити', news_path(@new),
+  <%= @new.created_at.strftime("%Y-%m-%d") %>
+  <div class='row' id="images">
+  <% for image in @new.images %>
+    <div class="col-md-4">
+      <%= image_tag image.avatar_url(:thumb) if image.avatar? %>
+      <div>
+        <%= link_to "видалити", image, :confirm => 'Ви впевнені?', :method => :delete %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+  <p> <%= @new.text.html_safe %></h1>
+  <p><%= link_to 'Відредагувати новину', edit_news_path(@new) %></p>
+  <p><%= link_to 'Видалити новину', news_path(@new),
               method: :delete,
               data: { confirm: 'Ви впевнені?' } %></p>
+  <p><%= link_to "Додати картинку", new_image_path(:news_id => @new) %></p>
   <p> <%= link_to 'Назад до списку новин', news_index_path %></p>
 </div>

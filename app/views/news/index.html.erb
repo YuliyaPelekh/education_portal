@@ -2,7 +2,8 @@
   <% @news.each do |new| %> 
   <div class='jumbotron'>  
       <h1><%= link_to new.title, new %></h1>
-      <p><%= truncate new.text, length: 300 %>
+      <%= new.created_at.strftime("%Y-%m-%d") %>
+      <p><%=truncate new.text, :length => 300, :escape => false %>
       <%= link_to 'Читати далі', new %></p>
   </div>
   <% end %>

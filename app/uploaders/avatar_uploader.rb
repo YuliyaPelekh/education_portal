@@ -1,7 +1,8 @@
 # encoding: utf-8
 
-class AvatarUploader < CarrierWave::Uploader::Base
 
+class AvatarUploader < CarrierWave::Uploader::Base
+require 'carrierwave/processing/mini_magick'
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
@@ -25,16 +26,21 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # end
 
   # Process files as they are uploaded:
-  # process :scale => [200, 300]
+  #process :scale => [200, 300]
   #
   # def scale(width, height)
   #   # do something
   # end
+  # def scale(width, height)
+  #  manipulate! do |img|
+  #      img = img.scale(200,300)
+  #   end
+  # end
 
   # Create different versions of your uploaded files:
-   version :thumb do
-     process :resize_to_fit => [100, 100]
-   end
+  version :thumb do
+    process :resize_to_fit => [300, 300]
+  end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

@@ -5,7 +5,7 @@
   <% for image in @new.images %>
     <div class="col-md-4">
       <%= image_tag image.avatar_url(:thumb) if image.avatar? %>
-      <div>
+      <div class='delete'>
         <%= link_to "видалити", image, :confirm => 'Ви впевнені?', :method => :delete %>
       </div>
     </div>

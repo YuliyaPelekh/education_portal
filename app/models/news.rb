@@ -4,4 +4,5 @@ class News < ActiveRecord::Base
   validates :text, presence: true,
                     length: { minimum: 10 }
   has_many :images, dependent: :destroy
+
 end

@@ -5,7 +5,8 @@
 .news_show{ 
   .row{
 	margin-bottom: 10px;
-	text-align: left;}
+	text-align: left;
+  }
   h1{
     font-family: 'Allods West Regular' !important;
     color: #D0210A !important;
@@ -13,4 +14,28 @@
     font-weight: bold;
     margin-bottom: 10px;
    }
+}
+
+.news_title{
+  font-family: 'Foo Regular' !important;
+   color: #D0210A !important;
+   font-size: 60px !important;
+   margin-left: 100px;
+   margin-bottom: 40px;
+
+}
+
+.create_news{
+  font-size: 25px;
+}
+
+.index_news{ 
+  img{ max-height: 250px;
+       max-width: 230px; }
+  h2{
+    font-family: 'Allods West Regular' !important;
+    font-weight: bold;
+    font-size: 30px !important;
+    a{
+      color: #D0210A !important;}}
 }

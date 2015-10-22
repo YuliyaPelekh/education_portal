@@ -32,10 +32,10 @@ require 'carrierwave/processing/mini_magick'
   #   # do something
   # end
   # def scale(width, height)
-  #  manipulate! do |img|
+  # manipulate! do |img|
   #      img = img.scale(200,300)
   #   end
-  # end
+  #  end
 
   # Create different versions of your uploaded files:
   version :thumb do

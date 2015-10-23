@@ -18,5 +18,13 @@ FactoryGirl.define do
   factory :editor, parent: :user do |f|
     f.role 'editor'
   end 
-   
+
+  factory :news do |f|
+    f.title 'Rainbow'
+    f.text 'Huguguguguguguugugugug'
+  end 
+
+  factory :invalid_news, parent: :news do |f|
+    f.text nil 
+  end
 end 

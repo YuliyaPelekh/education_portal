@@ -47,7 +47,7 @@ gem "mini_magick"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap-sass', '~> 3.3.5'
-
+gem 'database_cleaner', '~> 1.5.0'
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'

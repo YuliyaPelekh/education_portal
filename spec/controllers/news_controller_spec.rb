@@ -98,5 +98,11 @@ describe "POST create" do
  	    delete :destroy, id: @news 
  	  }.to change(News,:count).by(-1) 
     end
+
+    it 'renders news_index_path' do
+      @news = FactoryGirl.create(:news)
+      delete :destroy, id: @news 
+      expect(response).to redirect_to news_index_path
+    end 
   end 
 end 

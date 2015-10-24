@@ -1,3 +1,5 @@
+include ActionDispatch::TestProcess
+
 FactoryGirl.define do 
   factory :user do |f|
     f.first_name "John"
@@ -27,4 +29,14 @@ FactoryGirl.define do
   factory :invalid_news, parent: :news do |f|
     f.text nil 
   end
+
+  factory :image do |f|
+    f.name 'Adventure'
+    f.avatar { fixture_file_upload(File.new(Rails.root + 'spec/fixtures/images/images.jpeg')) }
+    f.news_id 1
+  end 
+
+  factory :invalid_image, parent: :image do |f|
+    f.avatar nil
+  end 
 end 

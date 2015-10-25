@@ -1,0 +1,7 @@
+<%= form_for @image, :html => {:multipart => true} do |f| %>
+  <%= f.hidden_field :news_id, :value => params[:news_id] %>
+  <p>
+    <%= f.file_field :avatar, :required => true, class: "btn btn-large btn-warning" %>
+  </p>
+  <p><%= f.submit 'Додати картинку', class: "btn btn-large btn-danger" %></p>
+<% end %>

@@ -7,6 +7,10 @@ require 'carrierwave/processing/mini_magick'
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
 
+
+  def cache_dir
+    "#{Rails.root}/tmp/uploads"
+  end
   # Choose what kind of storage to use for this uploader:
   storage :file
   # storage :fog

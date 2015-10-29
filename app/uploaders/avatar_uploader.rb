@@ -43,7 +43,11 @@ require 'carrierwave/processing/mini_magick'
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process :resize_and_pad => [300, 300, "#D5DED2", "Center"]
+    process :resize_to_fit => [300, 300]
+  end
+
+  version :gallery do
+    process :resize_to_fill => [300, 300, 'Center']
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

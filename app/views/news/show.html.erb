@@ -12,7 +12,7 @@
   <% end %>
 </div>
 
-  <p> <%= @new.text.html_safe %></h1>
+  <p> <%= @new.text.html_safe %></p>
   <p><%= link_to 'Відредагувати новину', edit_news_path(@new) %></p>
   <p><%= link_to 'Видалити новину', news_path(@new),
               method: :delete,

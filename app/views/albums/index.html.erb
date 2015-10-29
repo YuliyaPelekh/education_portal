@@ -1,0 +1,16 @@
+<h1 class= 'news_title'>Галерея</h1>
+  <% @albums.each do |album| %>
+  <div class='jumbotron'>   
+    <div class='row'>
+      <div class = 'col-md-4'>
+        <h1 class='album-title'><%= link_to album.title, album %></h1>
+        <%= album.created_at.strftime("%Y-%m-%d") %>
+        <% for pic in album.pictures.take(1) %> 
+          <div class='thumb'><%= link_to image_tag(pic.avatar_url(:gallery), :class => 'img-thumbnail img-responsive'), album%></div>
+        <% end %>
+        <p class='album-index-description'><%= album.description.html_safe %></p>
+      </div>
+      </div>
+    </div>
+  <% end %>
+  <%= link_to 'Створити альбом', new_album_path, :class => 'btn btn-lg btn-danger' %>

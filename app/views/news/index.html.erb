@@ -9,7 +9,7 @@
         <%= link_to "Читати далі", new %></p>
       <% else %>
         <% for image in new.images.take(1) %> 
-          <div class='col-md-3'><%= image_tag image.avatar_url%></div>
+          <div class='col-md-3'><%= image_tag image.avatar_url(:thumb)%></div>
         <% end %>
           <div class='col-md-9'>
             <h2><%= link_to new.title, new %></h2>

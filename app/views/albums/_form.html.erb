@@ -1,0 +1,10 @@
+<%= form_for @album, :html => {:multipart => true} do |f| %>
+  <div class="form-group"> 
+    <%= f.text_field :title, :placeholder => "Назва альбому", class: "form-control", :required => true %>
+  </div>
+  <div class="form-group"> 
+  	<%= f.label :description,'Опис альбому'  %>
+     <%= f.cktext_area :description, class: "form-control" %>
+  </div>
+    <%= f.submit "Надіслати", class: "btn btn-large btn-danger" %>
+ <% end %>				

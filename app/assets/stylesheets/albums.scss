@@ -1,0 +1,42 @@
+// Place all the styles related to the albums controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$color_suva_gray_approx: #888888;
+
+.thumb {
+  margin-top: 20px;
+  img {
+     &:hover {
+    cursor: pointer;
+    //-webkit-transform: scale(1.03, 1.03);
+    //-ms-transform: scale(2, 2);
+    transform: scale(1.03, 1.03);
+    transition-duration: 0.3s;
+    //-webkit-transition-duration: 0.3s;
+    box-shadow: 0 0 100px $color_suva_gray_approx;
+    z-index: 1;}
+  }
+}
+
+.pictures{
+  margin-bottom:30px;
+}
+
+.album-title{
+    font-family: 'Allods West Regular' !important;
+    color: #D0210A !important;
+    font-size: 35px !important;
+    font-weight: bold;
+    margin-bottom: 10px;
+    a{
+      color: #D0210A !important;
+    }}
+
+.album-description{
+   margin: 20px 0;
+}
+
+.album-index-description{
+  margin-top: 20px;
+  font-size: 10px;
+}

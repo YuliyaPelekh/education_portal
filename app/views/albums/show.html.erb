@@ -1,0 +1,23 @@
+<div class= 'news_show jumbotron'>
+  <h1><%= @album.title %></h1>
+  <%= @album.created_at.strftime("%Y-%m-%d") %>
+  <p class='album-description'> <%= @album.description.html_safe %></p>
+  <div class='row'>
+  <% for pic in @album.pictures %>
+    <div class="col-md-4 pictures">
+      <div class='thumb'>
+      <%= image_tag pic.avatar_url(:gallery), :class => 'img-thumbnail img-responsive' if pic.avatar? %>
+    </div>
+      <div class='delete'>
+        <%= link_to "видалити", pic, :confirm => 'Ви впевнені?', :method => :delete %>
+      </div>
+    </div>
+  <% end %>
+</div>
+  <p><%= link_to 'Відредагувати альбом', edit_album_path(@album) %></p>
+  <p><%= link_to 'Видалити альбом', album_path(@album),
+              method: :delete,
+              data: { confirm: 'Ви впевнені?' } %></p>
+  <p><%= link_to "Додати зображення", new_picture_path(:album_id => @album) %></p>
+  <p> <%= link_to 'Назад до альбомів', albums_path %></p>
+</div>

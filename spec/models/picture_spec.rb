@@ -1,5 +1,11 @@
-require 'rails_helper'
+require 'spec_helper'
 
-RSpec.describe Picture, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Picture do
+
+  before { @picture = Picture.new(avatar: File.new(Rails.root + 'spec/fixtures/images/images.jpeg'), album_id: 1) }
+
+  subject { @picture}
+  it { should respond_to(:avatar) }
+  it { should respond_to(:album_id) }
+  it { should be_valid }
 end

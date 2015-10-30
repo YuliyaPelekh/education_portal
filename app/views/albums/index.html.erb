@@ -8,7 +8,7 @@
         <% for pic in album.pictures.take(1) %> 
           <div class='thumb'><%= link_to image_tag(pic.avatar_url(:gallery), :class => 'img-thumbnail img-responsive'), album%></div>
         <% end %>
-        <p class='album-index-description'><%= album.description.html_safe %></p>
+        <p class='album-index-description'><%= album.description.to_s.html_safe %></p>
       </div>
       </div>
     </div>

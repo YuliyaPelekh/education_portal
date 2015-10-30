@@ -39,4 +39,22 @@ FactoryGirl.define do
   factory :invalid_image, parent: :image do |f|
     f.avatar nil
   end 
+
+  factory :album do |f|
+    f.title 'Rainbow'
+    f.description nil
+  end 
+
+  factory :invalid_album, parent: :album do |f|
+    f.title nil 
+  end
+
+  factory :picture do |f|
+    f.avatar { fixture_file_upload(File.new(Rails.root + 'spec/fixtures/images/images.jpeg')) }
+    f.album_id 1
+  end 
+
+  factory :invalid_picture, parent: :picture do |f|
+    f.avatar nil
+  end 
 end 

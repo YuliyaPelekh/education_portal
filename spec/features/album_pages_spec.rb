@@ -24,7 +24,7 @@ describe 'Album pages' do
       before do
         visit albums_path
         click_link 'Створити альбом'
-        fill_in 'Назва альбому', with: album.title
+        fill_in 'Назва альбому (максимум 15 символів)', with: album.title
         fill_in 'Опис альбому', with: album.description
         click_button "Надіслати"
       end

@@ -38,7 +38,7 @@ class AlbumsController < ApplicationController
 
   def destroy
     Album.find(params[:id]).destroy
-    flash[:success] = "Новина видалена"
+    flash[:success] = "Альбом видалений"
     redirect_to albums_path
   end
 

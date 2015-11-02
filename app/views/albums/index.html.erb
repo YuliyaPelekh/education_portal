@@ -1,7 +1,7 @@
 <h1 class= 'news_title'>Галерея</h1>
-  <% @albums.each do |album| %>
-  <div class='jumbotron'>   
-    <div class='row'>
+<div class='jumbotron'> 
+  <div class='row'>
+    <% @albums.each do |album| %> 
       <div class = 'col-md-4'>
         <h1 class='album-title'><%= link_to album.title, album %></h1>
         <%= album.created_at.strftime("%Y-%m-%d") %>
@@ -10,7 +10,7 @@
         <% end %>
         <p class='album-index-description'><%= album.description.to_s.html_safe %></p>
       </div>
-      </div>
+      <% end %>
+     </div>
     </div>
-  <% end %>
   <%= link_to 'Створити альбом', new_album_path, :class => 'btn btn-lg btn-danger' %>

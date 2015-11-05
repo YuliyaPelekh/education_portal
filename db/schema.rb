@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151102120237) do
+ActiveRecord::Schema.define(version: 20151105112635) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "title"
@@ -63,10 +63,17 @@ ActiveRecord::Schema.define(version: 20151102120237) do
   create_table "schedules", force: :cascade do |t|
     t.string   "group"
     t.string   "lesson"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.time     "hours"
     t.string   "day"
+    t.integer  "timetable_id"
+  end
+
+  create_table "timetables", force: :cascade do |t|
+    t.string   "day"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

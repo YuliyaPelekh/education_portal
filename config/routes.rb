@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :images
   resources :albums
   resources :pictures
+  resources :timetables
   resources :schedules
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,14 +1,14 @@
 <div class='form-center'>
 <%= form_for @schedule do |f| %>
-  <%= f.hidden_field :timetable_id, :value => params[:timetable_id] %>
+  <%= f.hidden_field :timetable_id, value: params[:timetable_id] %>
 <div class = 'form-group'>
-  <%= f.time_select :hours, {:minute_step => 5} %>
+  <%= f.text_field :hours, value: Time.new(2000,1,1,00,00,0).strftime("%H:%M") %>
   </div>
 <div class = 'form-group'>
-  <%= f.text_field :group, :placeholder => "Введіть назву групи", class: "form-control" %>
+  <%= f.text_field :group, placeholder: "Введіть назву групи", class: "form-control", required: true %>
   </div>
   <div class = 'form-group'>
-  <%= f.text_field :lesson, :placeholder => "Введіть назву уроку", class: "form-control" %>
+  <%= f.text_field :lesson, placeholder: "Введіть назву уроку", class: "form-control", required: true %>
   </div>
   <%= f.submit "Надіслати", class: "btn btn-lg btn-danger btn-submit" %>
 <% end %>

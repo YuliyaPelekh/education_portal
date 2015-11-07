@@ -11,7 +11,7 @@ class SchedulesController < ApplicationController
       redirect_to timetables_path
     else
       flash.now[:error] = 'Запис не збережений'
-      render '/schedule/new'
+      render '/schedules/new'
     end 
   end
 
@@ -24,7 +24,7 @@ class SchedulesController < ApplicationController
   if @schedule.update(schedule_params)
     redirect_to timetables_path
   else
-    render '/schedule/edit'
+    render '/schedules/edit'
   end
   end
 

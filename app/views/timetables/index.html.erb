@@ -1,5 +1,4 @@
 <div class = 'jumbotron'>
-
 <% @timetables.each do |t| %>
 <div class='schedule-container'>
 <h2><%= t.day %></h2>
@@ -14,13 +13,13 @@
       <td><%= schedule.hours.strftime("%H:%M") %></td>
       <td><%= schedule.group %></td>
       <td><%= schedule.lesson %></td>
-      <td><%= link_to "Відредагувати", edit_schedule_path(schedule, :timetable_id => t.id) %></td>
-      <td><%= link_to "Видалити", schedule, :confirm => 'Ви впевнені?', :method => :delete %></td>
+      <td><%= link_to "Відредагувати", edit_schedule_path(schedule, timetable_id: t.id) %></td>
+      <td><%= link_to "Видалити", schedule, confirm: 'Ви впевнені?', method: :delete %></td>
       </tr>
   <% end %>
 </table>
 
- <%= link_to 'Створити новий запис', new_schedule_path(:timetable_id => t), :class => 'btn btn-md btn-danger pull-right' %>
+ <%= link_to "Створити новий запис", new_schedule_path(timetable_id: t), class: 'btn btn-md btn-danger pull-right' %>
 </div>
 <% end %>
 </div>

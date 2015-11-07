@@ -33,7 +33,7 @@ describe 'Album pages' do
       it { should have_content(album.title)}
       it { should have_content(album.description)}
       it { should have_content( album.created_at.strftime("%Y-%m-%d")) }
-      it { should have_link('Відредагувати альбом', edit_album_path(album))}
+      it { should have_link('Відредагувати опис альбому', edit_album_path(album))}
       it { should have_link('Видалити альбом')}
       it { should have_link('Додати зображення')}
       it { should have_link('Назад до альбомів', albums_path)}

@@ -56,5 +56,20 @@ FactoryGirl.define do
 
   factory :invalid_picture, parent: :picture do |f|
     f.avatar nil
+  end
+
+  factory :schedule do |f|
+    f.timetable_id 1
+    f.hours Time.new(2000,1,1,20,30,0).strftime("%H:%M")
+    f.group 'group 1'
+    f.lesson 'painting'
   end 
+
+  factory :invalid_schedule, parent: :schedule do |f|
+    f.group nil
+  end 
+
+  factory :timetable do |f|
+    f.day 'monday'
+  end
 end 

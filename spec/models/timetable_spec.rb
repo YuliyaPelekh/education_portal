@@ -1,5 +1,11 @@
-require 'rails_helper'
+require 'spec_helper'
 
-RSpec.describe Timetable, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Timetable do
+
+  before { @timetable = Timetable.new(day: 'monday') }
+
+  subject { @timetable}
+  it { should respond_to(:day) }
+  it { should be_valid }
+
 end

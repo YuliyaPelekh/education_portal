@@ -1,6 +1,6 @@
 <div class= 'news_show jumbotron'>
   <h1><%= @album.title %></h1>
-  <%= @album.created_at.strftime("%Y-%m-%d") %>
+  <%= @album.created_at.strftime("%d-%m-%Y") %>
   <p class='album-description'> <%= @album.description.html_safe %></p>
   <div class='row'>
   <% for pic in @album.pictures %>

@@ -4,7 +4,7 @@
     <div class='row'>
       <% if new.images.empty? %>
         <h2><%= link_to new.title, new %></h2>
-        <%= new.created_at.strftime("%Y-%m-%d") %>
+        <%= new.created_at.strftime("%d-%m-%Y") %>
         <p><%=truncate new.text, :length => 300, :escape => false %>
         <%= link_to "Читати далі", new %></p>
       <% else %>
@@ -13,7 +13,7 @@
         <% end %>
           <div class='col-md-9'>
             <h2><%= link_to new.title, new %></h2>
-            <%= new.created_at.strftime("%Y-%m-%d") %>
+            <%= new.created_at.strftime("%d-%m-%Y") %>
             <p><%=truncate new.text, :length => 300, :escape => false %>
             <%= link_to "Читати далі", new %></p>
           </div>

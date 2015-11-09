@@ -15,7 +15,7 @@ describe 'News pages' do
     it { should have_link(news.title)}
     it { should have_link("Читати далі")}
     it { should have_css("img[src*='images.jpeg']")}
-    it { should have_content( news.created_at.strftime("%Y-%m-%d")) }
+    it { should have_content( news.created_at.strftime("%d-%m-%Y")) }
     it { should have_link('Створити новину', new_news_path)}
     it { should have_selector('p', news.text.truncate(300)) }
 

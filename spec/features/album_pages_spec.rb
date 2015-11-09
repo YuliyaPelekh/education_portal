@@ -15,7 +15,7 @@ describe 'Album pages' do
     it { should have_content(album.description) }
     it { should have_link(album.title)}
     it { should have_css("img[src*='images.jpeg']")}
-    it { should have_content( album.created_at.strftime("%Y-%m-%d")) }
+    it { should have_content( album.created_at.strftime("%d-%m-%Y")) }
     it { should have_link('Створити альбом', new_album_path)}
   end
 

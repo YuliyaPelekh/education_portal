@@ -2,7 +2,7 @@
 <%= form_for @schedule do |f| %>
   <%= f.hidden_field :timetable_id, value: params[:timetable_id] %>
 <div class = 'form-group'>
-  <%= f.text_field :hours, value: Time.new(2000,1,1,00,00,0).strftime("%H:%M") %>
+  <%= f.text_field :hours, value: Time.new(2000,1,1,00,00,0).strftime("%H:%M"), placeholder: 'Формат 00:00' %>
   </div>
 <div class = 'form-group'>
   <%= f.text_field :group, placeholder: "Введіть назву групи", class: "form-control", required: true %>

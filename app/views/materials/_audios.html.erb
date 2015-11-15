@@ -1,0 +1,13 @@
+<div class='row'>
+ <% @audios.each do |audio| %> 
+  <div class='material'>
+      <h1 class='album-title'><%= link_to audio.name, audio %></h1>   
+        <p class='album-description'><%= audio.description.to_s.html_safe %></p>
+        	<p>
+        		<%=link_to audio, class: "btn btn-success btn-lg" do %>Слухати
+          <span class="glyphicon glyphicon-headphones"></span>
+           <% end %>
+          </p>
+        </div>
+     <% end %>
+</div>

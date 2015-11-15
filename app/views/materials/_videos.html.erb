@@ -1,0 +1,13 @@
+<div class='row'>
+  <% @videos.each do |video| %> 
+    <div class='material'>
+      <h1 class='album-title'><%= link_to video.name, video %></h1>   
+        <p class='album-description'><%= video.description.to_s.html_safe %></p>
+        	<p>
+        		<%=link_to video, class: "btn btn-success btn-lg" do %>Дивитися
+          <span class="glyphicon glyphicon-facetime-video"></span>
+           <% end %>
+          </p>
+        </div>
+   <% end %>
+</div>

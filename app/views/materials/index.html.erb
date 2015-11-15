@@ -1,0 +1,13 @@
+<div class='jumbotron'>
+  <div class='row'>
+    <div id="video" class="col-md-5">
+      <h2>Відеоматеріали</h2>
+      <%= render 'materials/videos' %>
+    </div>
+  <div id="audio" class="col-md-5 col-md-offset-1">
+  	  <h2>Аудіоматеріали</h2>
+    <%= render 'materials/audios' %>
+  </div>
+ </div>
+</div>
+  <%= link_to 'Додати матеріали', new_material_path, :class => 'btn btn-lg btn-danger' %>

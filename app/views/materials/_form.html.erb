@@ -1,0 +1,16 @@
+<%= form_for @material, :html => {:multipart => true} do |f| %>
+  <div class='form-group'>
+    <%= f.label :sort,'Виберіть вид'  %>
+    <%= f.select :sort, options_for_select([[' '], ['video'], ['audio']]), class: "form-control", required: true %>
+ </div>
+ <div class="form-group"> 
+    <%= f.text_field :name, :placeholder => "Назва матеріалу", class: "form-control", :required => true %>
+  </div>
+  <div class="form-group">
+    <%= f.file_field :video, class: "btn btn-large btn-warning" %>
+  </div>
+  <div class="form-group"> 
+     <%= f.cktext_area :description, class: "form-control", :required => true %>
+  </div>
+  <p><%= f.submit 'Додати матеріал', class: "btn btn-large btn-danger" %></p>
+<% end %>

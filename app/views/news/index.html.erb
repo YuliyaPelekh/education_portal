@@ -11,12 +11,10 @@
         <% for image in new.images.take(1) %> 
           <div class='col-md-3'><%= image_tag image.avatar_url(:thumb)%></div>
         <% end %>
-          <div class='col-md-9'>
             <h2><%= link_to new.title, new %></h2>
             <%= new.created_at.strftime("%d-%m-%Y") %>
             <p><%=truncate new.text, :length => 300, :escape => false %>
             <%= link_to "Читати далі", new %></p>
-          </div>
         <% end %>
       </div>
     </div>

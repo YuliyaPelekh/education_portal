@@ -6,10 +6,6 @@ class User < ActiveRecord::Base
    validates :password, presence:true, length: { minimum: 6 }
    has_secure_password 
 
-   def editor? 
-     self.role == 'editor' 
-   end
-
    def admin? 
      self.role == 'admin' 
    end

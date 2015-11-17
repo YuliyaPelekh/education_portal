@@ -8,16 +8,21 @@
       <div class='thumb'>
       <%= image_tag pic.avatar_url(:gallery), :class => 'img-thumbnail img-responsive' if pic.avatar? %>
     </div>
+    <% if current_user && current_user.admin? %>
       <div class='delete'>
-        <%= link_to "видалити", pic, :confirm => 'Ви впевнені?', :method => :delete %>
+        <%= link_to "видалити", pic, :method => :delete, data: { confirm: 'Ви впевнені?' } %>
       </div>
+    <% end %>
     </div>
   <% end %>
 </div>
+
+<% if current_user && current_user.admin? %>
   <p><%= link_to 'Відредагувати опис альбому', edit_album_path(@album) %></p>
   <p><%= link_to 'Видалити альбом', album_path(@album),
               method: :delete,
               data: { confirm: 'Ви впевнені?' } %></p>
   <p><%= link_to "Додати зображення", new_picture_path(:album_id => @album) %></p>
   <p> <%= link_to 'Назад до альбомів', albums_path %></p>
+<% end %>
 </div>

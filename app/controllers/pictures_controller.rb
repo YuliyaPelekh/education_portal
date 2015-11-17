@@ -1,5 +1,6 @@
 class PicturesController < ApplicationController
-  
+  before_action :require_admin
+
   def new
     @picture = Picture.new(:album_id => params[:album_id])
     @album = Album.find(params[:album_id])

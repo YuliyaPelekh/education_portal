@@ -1,4 +1,5 @@
 class NewsController < ApplicationController
+  before_action :require_admin, only: [:new, :create, :edit, :update, :destroy]
 
   def index
   	@news = News.paginate(:page => params[:page], :per_page => 5).order('created_at DESC')

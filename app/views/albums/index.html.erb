@@ -8,9 +8,11 @@
         <% for pic in album.pictures.take(1) %> 
           <div class='thumb'><%= link_to image_tag(pic.avatar_url(:gallery), :class => 'img-thumbnail img-responsive'), album%></div>
         <% end %>   
-        <p class='album-description'><%=link_to truncate(album.description.to_s, :length => 100, :escape => false), album %></p>
+        <p class='album-description'><%=truncate album.description.to_s, :length => 100, :escape => false %></p>
         </div>
       <% end %>
      </div>
     </div>
+<% if current_user && current_user.admin? %>
   <%= link_to 'Створити альбом', new_album_path, :class => 'btn btn-lg btn-danger' %>
+<% end %>

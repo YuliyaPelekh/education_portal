@@ -1,4 +1,7 @@
 class MaterialsController < ApplicationController
+  before_action :require_user
+  before_action :require_admin, only: [:new, :create, :edit, :update, :destroy]
+
   def index
     @videos = Material.where(sort: 'video')
     @audios = Material.where(sort: 'audio')

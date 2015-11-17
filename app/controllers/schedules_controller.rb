@@ -1,5 +1,5 @@
 class SchedulesController < ApplicationController
-  
+  before_action :require_admin
   def new
   	@schedule = Schedule.new(:timetable_id => params[:timetable_id])
   end

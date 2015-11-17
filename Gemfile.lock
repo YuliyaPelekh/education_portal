@@ -77,6 +77,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
+    commontator (4.10.5)
+      jquery-rails
+      rails (>= 3.1)
     database_cleaner (1.5.0)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
@@ -339,6 +342,7 @@ DEPENDENCIES
   carrierwave
   ckeditor
   coffee-rails (~> 4.1.0)
+  commontator (~> 4.10.0)
   database_cleaner (~> 1.5.0)
   factory_girl_rails (~> 4.5.0)
   figaro

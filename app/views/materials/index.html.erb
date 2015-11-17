@@ -10,4 +10,6 @@
   </div>
  </div>
 </div>
+  <% if current_user && current_user.admin? %>
   <%= link_to 'Додати матеріали', new_material_path, :class => 'btn btn-lg btn-danger' %>
+  <% end %>

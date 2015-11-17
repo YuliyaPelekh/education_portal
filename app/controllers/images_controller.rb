@@ -1,5 +1,7 @@
 class ImagesController < ApplicationController
-  
+
+  before_action :require_admin  
+
   def new
     @image = Image.new(:news_id => params[:news_id])
     @news = News.find(params[:news_id])

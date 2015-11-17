@@ -6,16 +6,23 @@
   <% for image in @new.images %>
     <div class='col-md-4'>
       <%= image_tag image.avatar_url(:thumb) if image.avatar? %>
+      <% if current_user && current_user.admin? %>
       <div class='delete'>
-        <%= link_to "видалити", image, :confirm => 'Ви впевнені?', :method => :delete %>
+        <%= link_to "видалити", image, :method => :delete, data: { confirm: 'Ви впевнені?' } %>
       </div>
+      <% end %>
      </div>
   <% end %>
   <p> <%= @new.text.html_safe %></p>
+
+  <% if current_user && current_user.admin? %>
   <p><%= link_to 'Відредагувати новину', edit_news_path(@new) %></p>
   <p><%= link_to 'Видалити новину', news_path(@new),
               method: :delete,
               data: { confirm: 'Ви впевнені?' } %></p>
   <p><%= link_to "Додати картинку", new_image_path(:news_id => @new) %></p>
   <p> <%= link_to 'Назад до списку новин', news_index_path %></p>
+  <% end %>
+
 </div>
+  

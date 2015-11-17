@@ -49,6 +49,7 @@ gem "mini_magick"
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'database_cleaner', '~> 1.5.0'
 gem "fog"
+gem 'commontator', '~> 4.10.0'
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
